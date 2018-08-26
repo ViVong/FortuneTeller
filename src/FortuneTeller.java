@@ -3,11 +3,13 @@ import java.util.Scanner;
 public class FortuneTeller {
 
 	public static void main(String[] args) {
+		//Variable declarations
 		String firstName, lastName, color, quitter;
 		int age, siblings;
 		float birthday;
 		Scanner input = new Scanner(System.in);
 		
+		//Prompting inputs for name, age, birth month, color, and siblings.
 		System.out.println("Enter your First Name:");
 		firstName = input.next();
 		if (firstName.toLowerCase().equals("quit")) {
@@ -37,7 +39,7 @@ public class FortuneTeller {
 			System.exit(0);
 		}
 		birthday = Integer.parseInt(quitter);
-
+		//Set to loop if colors are not input properly.
 		System.out.println("What is your favourite ROYGBIV color? (Enter Help for list of colors)");
 		color = input.next();
 		while(!(color.toLowerCase().equals("red")||color.toLowerCase().equals("orange")||color.toLowerCase().equals("yellow")||color.toLowerCase().equals("green")||color.toLowerCase().equals("blue")||color.toLowerCase().equals("indigo")||color.toLowerCase().equals("violet"))){
@@ -64,6 +66,7 @@ public class FortuneTeller {
 		}
 		siblings = Integer.parseInt(quitter);
 		
+		//Determining retirement based on age
 		if (age%2 == 0) {
 			age = 2720;
 		}
@@ -71,6 +74,7 @@ public class FortuneTeller {
 			age = 151;
 		}
 		
+		//Determing vacation home based on sibling count.
 		if (siblings > 3) {
 			quitter = "Portland, OR";
 		}
@@ -90,6 +94,7 @@ public class FortuneTeller {
 			quitter = "Las Vegas, NV";
 		}
 		
+		//Determining transportation based on color
 		color = color.toLowerCase();
 		if (color.equals("red")) {
 			color = "Ferrari";
@@ -113,6 +118,7 @@ public class FortuneTeller {
 			color = "Invisible Boat";
 		}
 		
+		//Determining savings based on birth month
 		if (birthday > 0 && birthday < 5) {
 			birthday = 27.95f;
 		}
@@ -126,6 +132,7 @@ public class FortuneTeller {
 			birthday = 00.01f;
 		}
 		
+		//Output of results
 		System.out.printf("%s %s will 'retire' in %d years somehow saving $%.2f in the bank with a vacation home near, but not in, %s; All while riding around in a rusty %s.", firstName, lastName, age, birthday, quitter, color);
 	}
 }
