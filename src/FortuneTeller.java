@@ -44,6 +44,10 @@ public class FortuneTeller {
 			if(color.toLowerCase().equals("help")) {
 				System.out.println("ROYGBIV colors are: Red, Orange, Yellow, Green, Blue, Indigo, and Violet.");
 			}
+			if(color.toLowerCase().equals("quit")) {
+				System.out.println("Nobody likes a quitter...");
+				System.exit(0);
+			}
 			System.out.println("Please pick a valid color. (Enter Help for a list of colors)");
 			color = input.next();
 		}
@@ -109,13 +113,13 @@ public class FortuneTeller {
 			color = "Invisible Boat";
 		}
 		
-		if (birthday > 0 || birthday < 5) {
+		if (birthday > 0 && birthday < 5) {
 			birthday = 27.95f;
 		}
-		else if (birthday > 4 || birthday < 9) {
+		else if (birthday > 4 && birthday < 9) {
 			birthday = 259.91f;
 		}
-		else if (birthday > 8 || birthday < 13) {
+		else if (birthday > 8 && birthday < 13) {
 			birthday = 999.99f;
 		}
 		else {
