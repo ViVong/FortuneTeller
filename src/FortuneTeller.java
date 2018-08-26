@@ -61,10 +61,10 @@ public class FortuneTeller {
 		siblings = Integer.parseInt(quitter);
 		
 		if (age%2 == 0) {
-			age = 27;
+			age = 2720;
 		}
 		else {
-			age = 11;
+			age = 151;
 		}
 		
 		if (siblings > 3) {
@@ -122,6 +122,6 @@ public class FortuneTeller {
 			birthday = 00.01f;
 		}
 		
-		System.out.printf("%s %s will retire in %d years with $%.2f in the bank, a vacation home in %s, and travel by %s", firstName, lastName, age, birthday, quitter, color);
+		System.out.printf("%s %s will 'retire' in %d years somehow saving $%.2f in the bank with a vacation home near, but not in, %s; All while riding around in a rusty %s.", firstName, lastName, age, birthday, quitter, color);
 	}
 }
